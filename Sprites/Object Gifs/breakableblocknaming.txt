@@ -1,0 +1,15 @@
+IMPORTANT!! DO NOT EDIT.
+
+NAME BREAKABLE BLOCKS AS FOLLOWS
+-------------------------
+
+break_A.gif
+-------------------------
+break = "break"
+A = # corresponding to proper tileset
+
+A VALUES
+-------------------------
+0 = Bomberdefault
+1 = Pokegrass
+etc.

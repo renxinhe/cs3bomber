@@ -1,0 +1,22 @@
+import java.util.*;
+import java.io.*;
+import java.awt.*;
+import java.awt.image.*;
+
+public abstract class Player implements Entity 
+{
+	protected BufferedImage characterSprite;
+	protected Statistics stat;
+	protected byte numBombLeft;
+	
+	protected final boolean isBot;
+	
+	public Player()
+	{
+		characterSprite = null;
+		stat = null;
+		numBombLeft = 0;
+		
+		isBot = false;
+	}
+}

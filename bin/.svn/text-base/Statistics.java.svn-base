@@ -1,0 +1,31 @@
+
+public class Statistics
+{
+	private int speed;
+	private int fuseLength;
+	private int bombRange;
+	private int bombNumber;
+	private Item item;
+	
+	public Statistics()
+	{
+		speed = 3;
+		fuseLength = 3;
+		bombRange = 2;
+		bombNumber = 1;
+		item = null;
+	}
+	
+	public void changeSpeed(int changeAmount)
+	{
+		int temp = speed + changeAmount;
+		if(temp < 1)
+			speed = 1;
+		else if(temp > 10)
+			speed = 10;
+		else
+			speed = temp;
+	}
+	
+	
+}

@@ -1,0 +1,79 @@
+import javax.imageio.*;
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
+import java.util.*;
+import java.io.*;
+
+public class Game
+{
+	public static void main(String[] args) throws IOException
+	{
+		JFrame mainWindow = new JFrame();
+		mainWindow.setFocusable(true);
+		mainWindow.setSize(1000, 700); // 15x11; 30pix each
+		mainWindow.setResizable(false);
+		mainWindow.setBackground(new Color(247, 231, 206));
+		mainWindow.setIconImage(ImageIO.read(new File("Pikachu_Icon.ico")));
+		
+		//TODO: GUIPanel
+		GUIPanel testing = new GUIPanel();
+		mainWindow.getContentPane().add(testing);
+		mainWindow.setTitle("Bomber");
+		mainWindow.setLocation(200,100);
+		mainWindow.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		mainWindow.setVisible(true);
+	}
+}
+
+class GUIPanel extends JPanel implements MouseListener
+{
+	String mousePosition = "";
+	
+	public GUIPanel()
+	{
+		this.setFocusable(true);
+		this.addMouseListener(this);
+	}
+	
+	public void paintComponent(Graphics g)
+	{
+		g.fillRect(20, 20, 30*15, 30*11);
+		//DrawGrid
+		g.setColor(Color.CYAN);
+		for(int i=20; i<16*30; i+=30)
+			g.drawLine(i, 20, i, 30*11+20);
+		for(int i=20; i<12*30; i+=30)
+			g.drawLine(20, i, 30*15+20, i);
+	}
+
+	@Override
+	public void mouseClicked(MouseEvent e)
+	{
+		mousePosition = e.getPoint().toString();
+		System.out.println(mousePosition);
+		System.out.println((int)(e.getX()/30)+" "+(int)(e.getY()/30));
+		//repaint();
+	}
+
+	public void mouseEntered(MouseEvent e) {}
+
+	@Override
+	public void mouseExited(MouseEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void mousePressed(MouseEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void mouseReleased(MouseEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+}

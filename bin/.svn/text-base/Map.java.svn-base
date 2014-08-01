@@ -1,0 +1,30 @@
+import java.util.*;
+import java.awt.event.*;
+import java.io.*;
+
+import javax.swing.*;
+
+public class Map extends JPanel implements KeyListener, MouseListener
+{
+	protected int NUM_ROW;
+	protected int NUM_COLUMN;
+	protected Tile[][] tileContentPane;
+	protected Entity[][][] entityContentPane; //[x][y][0-Destructible 1-Item 2+-Player]
+	protected File mapFile;
+	
+	protected void readMap() throws FileNotFoundException
+	{
+		/*Map File Format Convention
+		 *NUM_ROW NUM_COLUMN
+		 *
+		 */
+		Scanner input = new Scanner(mapFile);
+		NUM_ROW = input.nextInt();
+		NUM_COLUMN = input.nextInt(); input.nextLine();
+		for(int i=0; i<NUM_ROW; i++)
+			for(int j=0; j<NUM_COLUMN; j++)
+			{
+				//Put in mapping convention
+			}
+	}
+}

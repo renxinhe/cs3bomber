@@ -1,0 +1,30 @@
+IMPORTANT!! DO NOT EDIT.
+
+NAME TILES AS FOLLOWS
+-------------------------
+
+tile_A_B.png
+-------------------------
+tile = "tile"
+A = # corresponding to proper tileset
+B = # corresponding to respective tile
+
+A VALUES
+-------------------------
+0 = Bomberdefault
+1 = Pokegrass
+etc.
+
+B VALUES
+-------------------------
+1 = Default Tile (can walk on, etc.)
+
+2 = Unbreakable block
+3 = left wall
+4 = right wall
+5 = top wall
+6 = bottom wall
+7 = topleft wall
+8 = topright wall
+9 = bottomleft wall
+10 = bottomright wall

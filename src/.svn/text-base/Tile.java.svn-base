@@ -1,0 +1,25 @@
+import java.awt.image.*;
+import java.io.*;
+import java.util.*;
+
+import javax.imageio.ImageIO;
+
+public class Tile
+{
+	public String name;
+	protected BufferedImage image;
+	public boolean solid;
+	
+	public Tile()
+	{
+		name = null;
+		image = null;
+		solid = null;
+	}
+	
+	public Tile(String name) throws IOException
+	{
+		this.name = name;
+		this.image = ImageIO.read(new File("Tile\\" + name + ".gif"));
+	}
+}

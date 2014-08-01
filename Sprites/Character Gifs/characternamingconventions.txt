@@ -1,0 +1,26 @@
+IMPORTANT!! DO NOT EDIT.
+
+NAME CHARACTER SPRITES AS FOLLOWS
+-------------------------
+
+char_A_B.gif
+-------------------------
+char = "char"
+A = # corresponding to proper character
+B = # corresponding to respective animation
+
+A VALUES
+-------------------------
+0 = White Bomberman
+1 = Black Bomberman
+2 = Bulbasaur
+3 = Pikachu
+etc.
+
+B VALUES
+-------------------------
+1 = Death
+2 = Movement Down
+3 = Movement Up
+4 = Movement Left
+5 = Movement Right

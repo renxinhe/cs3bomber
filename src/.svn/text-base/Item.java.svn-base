@@ -1,0 +1,17 @@
+import org.omg.CosNaming.IstringHelper;
+
+
+public abstract class Item implements Entity
+{
+	protected final boolean isInstaneous; //If item take effect immediately after picked up.
+	
+	public Item()
+	{
+		isInstaneous = true;
+	}
+	
+	public Item(boolean isInstaneous)
+	{
+		this.isInstaneous = isInstaneous;
+	}
+}
